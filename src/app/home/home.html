@@ -1,0 +1,730 @@
+<main> <article> 
+<div class="hero-wrapper" [class.light-theme]="theme.isLight()"></div>
+
+ <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1> Daniel Damilola Joseph</h1>
+
+      <p class="hero-subtitle">
+        Building scalable web applications with
+        <span class="tech-inline">
+          <img src="/angular.png" alt="Angular logo" class="tech-inline-icon" />
+          <span class="tech-angular">Angular</span>
+        </span>,
+        <span class="tech-inline">
+          <img src="/react.png" alt="React logo" class="tech-inline-icon" />
+          <span class="tech-react">React</span>
+        </span> &amp;
+        <span class="tech-inline">
+          <img src="/python.png" alt="Python logo" class="tech-inline-icon" />
+          <span class="tech-python">Python</span>
+        </span>.
+      </p>
+
+      <p class="hero-description">
+        I build end-to-end applications with modern frontend frameworks and powerful backend solutions.
+      </p>
+
+      <div class="badges">
+        @for (item of highlightbadges; track item.label) {
+          <div class="badge">
+            <span class="badge-icon">{{ item.icon }}</span>
+            <span>{{ item.label }}</span>
+          </div>
+        }
+      </div>
+
+      <a class="view-projects-btn" href="#projects">
+        View Projects
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <div class="tech-icons">
+      <div class="tech-icon-item">
+        <img src="/angular.png" alt="Angular logo" class="tech-icon-image" />
+        <span>Angular</span>
+      </div>
+      <div class="tech-icon-item">
+        <img src="/react.png" alt="React logo" class="tech-icon-image" />
+        <span>React</span>
+      </div>
+      <div class="tech-icon-item">
+        <img src="/python.png" alt="Python logo" class="tech-icon-image" />
+        <span>Python</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech stack cards -->
+  <section class="tech-stack-section">
+    <h2>My Tech Stack</h2>
+
+    <div class="tech-stack-cards">
+      @for (tech of techStack; track tech.name) {
+        <div class="tech-card">
+          <div class="tech-card-icon" [class]="tech.colorClass">
+            @if (tech.image) {
+              <img [src]="tech.image" [alt]="tech.name + ' logo'" class="tech-card-image" />
+            } @else {
+              {{ tech.name.charAt(0) }}
+            }
+          </div>
+          <div class="tech-card-content">
+            <h3 [class]="tech.colorClass">{{ tech.name }}</h3>
+            <p>{{ tech.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- about-->
+
+   <section id="about" >
+    <div class="about-copy">
+      <p class="eyebrow">ABOUT ME</p>
+      <h1 class="headline">
+        Building efficient, scalable and
+        <span class="gradient-text">impactful</span> web solutions.
+      </h1>
+      <p class="subtext">
+        I'm a Fullstack Engineer who loves turning ideas into real-world
+        applications. With a strong foundation in modern frontend frameworks
+        and backend technologies, I build solutions that are clean, scalable
+        and user-focused.
+      </p>
+
+      <div class="info-row">
+        @for (item of infoRow(); track item.label) {
+          <div class="info-item">
+            <span class="info-icon">
+              @switch (item.icon) {
+                @case ('pin') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/>
+                    <circle cx="12" cy="9.5" r="2.4"/>
+                  </svg>
+                }
+                @case ('calendar') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <rect x="3.5" y="5" width="17" height="15.5" rx="2"/>
+                    <path d="M3.5 9.5h17M8 3v4M16 3v4"/>
+                  </svg>
+                }
+                @case ('mail') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <rect x="3" y="5.5" width="18" height="13" rx="2"/>
+                    <path d="m3.5 6.5 8.5 6.5 8.5-6.5"/>
+                  </svg>
+                }
+              }
+            </span>
+            <span class="info-text">
+              <span class="info-label">{{ item.label }}</span>
+              <span class="info-value">{{ item.value }}</span>
+            </span>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="code-card">
+      <div class="code-dots">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+      </div>
+      <pre class="code-block"><code
+        ><span class="tok-keyword">const</span> <span class="tok-var">developer</span> = {{ '{' }}
+  <span class="tok-prop">name</span>: <span class="tok-string">"{{ codeSnippet().name }}"</span>,
+  <span class="tok-prop">focus</span>: [<span class="tok-string">"{{ codeSnippet().focus[0] }}"</span>, <span class="tok-string">"{{ codeSnippet().focus[1] }}"</span>, <span class="tok-string">"{{ codeSnippet().focus[2] }}"</span>],
+  <span class="tok-prop">passion</span>: <span class="tok-string">"{{ codeSnippet().passion }}"</span>,
+  <span class="tok-prop">alwaysLearning</span>: <span class="tok-boolean">{{ codeSnippet().alwaysLearning }}</span>,
+{{ '}' }};
+
+<span class="tok-comment">// Always shipping, always learning.</span></code></pre>
+    </div>
+  </section>
+
+  <!-- Drives + Tech -->
+  <section class="grid-section">
+    <div class="drives">
+      <h2 class="section-title">What Drives Me</h2>
+
+      @for (card of driveCards(); track card.title) {
+        <div class="drive-card" [class]="'accent-' + card.accent">
+          <span class="drive-icon">
+            @switch (card.icon) {
+              @case ('rocket') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M12 15c3.5 0 6-2.5 7-9 -6.5 1-9 3.5-9 7l-4 4 2 2 4-4Z"/>
+                  <path d="M9 15c0 2-1 4-4 5 1-3 1-4 1-4"/>
+                  <circle cx="14" cy="9" r="1.4"/>
+                </svg>
+              }
+              @case ('code') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="m8 6-5.5 6L8 18M16 6l5.5 6L16 18"/>
+                </svg>
+              }
+              @case ('book') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M4 5.5C6 4.3 9 4 12 5.2c3-1.2 6-0.9 8 0.3v13c-2-1.2-5-1.5-8-0.3-3-1.2-6-0.9-8 0.3Z"/>
+                  <path d="M12 5.2v13"/>
+                </svg>
+              }
+            }
+          </span>
+          <div class="drive-text">
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="tech-and-stats">
+      <h2 class="section-title">Tech &amp; Tools I Work With</h2>
+
+      <div class="tech-grid">
+        @for (tech of techIcons(); track tech.name) {
+          <div class="tech-box" [attr.aria-label]="tech.name" [title]="tech.name">
+            @switch (tech.icon) {
+              @case ('angular') {
+                <img src="/angular.png" alt="Angular logo" class="brand-angular" />
+              }
+              @case ('react') {
+                <img src="/react.png" alt="React logo" class="brand-react" />
+              }
+              @case ('python') {
+                <img src="/python.png" alt="Python logo" class="brand-python" />
+              }
+
+              @case ('typescript') {
+                <img src="/typescript.png" alt="TypeScript logo" class="brand-ts" />
+              }
+                @case ('javascript') {
+                <img src="/javaScript.png" alt="JavaScript logo" class="brand-js" />
+              }
+
+              @case ('git') {
+                <img src="/git.png" alt="Git logo" class="brand-git" />
+              }
+
+            
+
+            }
+          </div>
+        }
+      </div>
+
+      <div class="divider"></div>
+
+      <h2 class="section-title">Quick Stats</h2>
+
+      <div class="stats-grid">
+        @for (stat of quickStats(); track stat.label) {
+          <div class="stat-card">
+            <span class="stat-icon" [class]="'stat-' + stat.icon">
+              @switch (stat.icon) {
+                @case ('code') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="m8 6-5.5 6L8 18M16 6l5.5 6L16 18"/>
+                  </svg>
+                }
+                @case ('clients') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <circle cx="9" cy="8" r="3"/>
+                    <path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/>
+                    <circle cx="17" cy="9" r="2.3"/>
+                    <path d="M15.5 14c2.3.3 4 1.9 4 4.5"/>
+                  </svg>
+                }
+                @case ('coffee') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9Z"/>
+                    <path d="M17 10.5h1.5a2.5 2.5 0 0 1 0 5H17"/>
+                    <path d="M8 3.5c-.6.6-.6 1 0 1.6s.6 1 0 1.6M12 3.5c-.6.6-.6 1 0 1.6s.6 1 0 1.6"/>
+                  </svg>
+                }
+                @case ('rocket') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M12 15c3.5 0 6-2.5 7-9 -6.5 1-9 3.5-9 7l-4 4 2 2 4-4Z"/>
+                    <path d="M9 15c0 2-1 4-4 5 1-3 1-4 1-4"/>
+                    <circle cx="14" cy="9" r="1.4"/>
+                  </svg>
+                }
+              }
+            </span>
+            <span class="stat-value">{{ stat.value }}</span>
+            <span class="stat-label">{{ stat.label }}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-bar">
+    <div class="cta-left">
+      <span class="cta-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="m3 11 18-8-8 18-2.5-7.5L3 11Z"/>
+        </svg>
+      </span>
+      <div class="cta-text">
+        <h3>Let's build something amazing together.</h3>
+        <p>I'm always open to discussing new projects and opportunities.</p>
+      </div>
+    </div>
+    <a class="btn btn-outline" href="#contact">
+      Get In Touch
+      <span class="arrow">→</span>
+    </a>
+  </section>
+
+
+
+
+
+  <!--Experience-->
+  <header id="experience" class="page-header">
+    <div class="header-text">
+      <h1>Experience</h1>
+      <p>My professional journey and the companies I've had the privilege to work with.</p>
+
+      <div class="stats-row">
+        @for (stat of stats(); track stat.id) {
+          <div class="stat-card" [style.--stat-color]="'var(' + stat.colorVar + ')'">
+            <div class="stat-icon">
+              @switch (stat.iconType) {
+                @case ('briefcase') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  </svg>
+                }
+                @case ('calendar') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                    <path d="M16 2v4M8 2v4M3 10h18"></path>
+                  </svg>
+                }
+                @case ('users') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                }
+              }
+            </div>
+            <div class="stat-info">
+              <span class="stat-value">{{ stat.value }}</span>
+              <span class="stat-label">{{ stat.label }}</span>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="header-illustration" aria-hidden="true">
+      <svg viewBox="0 0 320 220" class="laptop-svg">
+        <rect x="60" y="10" width="200" height="140" rx="8" fill="none" stroke="var(--border)" stroke-width="2"></rect>
+        <circle cx="75" cy="24" r="2.5" fill="var(--text-muted)"></circle>
+        <circle cx="85" cy="24" r="2.5" fill="var(--text-muted)"></circle>
+        <circle cx="95" cy="24" r="2.5" fill="var(--text-muted)"></circle>
+        <line x1="60" y1="34" x2="260" y2="34" stroke="var(--border)" stroke-width="2"></line>
+        <rect x="80" y="50" width="140" height="80" rx="4" fill="none" stroke="var(--border)" stroke-width="1.5"></rect>
+        <line x1="90" y1="62" x2="120" y2="62" stroke="var(--text-muted)" stroke-width="2"></line>
+        <line x1="90" y1="72" x2="140" y2="72" stroke="var(--text-muted)" stroke-width="2"></line>
+        <line x1="90" y1="82" x2="110" y2="82" stroke="var(--text-muted)" stroke-width="2"></line>
+        <line x1="150" y1="95" x2="175" y2="95" stroke="var(--accent-yellow)" stroke-width="2"></line>
+        <line x1="90" y1="105" x2="130" y2="105" stroke="var(--text-muted)" stroke-width="2"></line>
+        <line x1="90" y1="115" x2="150" y2="115" stroke="var(--text-muted)" stroke-width="2"></line>
+        <path d="M30 160 L290 160 L275 195 L45 195 Z" fill="none" stroke="var(--border)" stroke-width="2"></path>
+        <line x1="150" y1="178" x2="170" y2="178" stroke="var(--border)" stroke-width="2"></line>
+
+        <path d="M12 30 h14 M19 23 v14" stroke="var(--text-muted)" stroke-width="2"></path>
+        <circle cx="18" cy="90" r="6" fill="none" stroke="var(--text-muted)" stroke-width="2"></circle>
+        <path d="M296 100 l7 -7 M296 93 l7 7" stroke="var(--border)" stroke-width="2"></path>
+        <circle cx="300" cy="55" r="6" fill="none" stroke="var(--border)" stroke-width="2"></circle>
+        <path d="M22 130 l8 -8 -8 -8 -8 8 z" fill="none" stroke="var(--text-muted)" stroke-width="1.5"></path>
+        <path d="M288 20 h10 M293 15 v10" stroke="var(--accent-yellow)" stroke-width="2"></path>
+      </svg>
+    </div>
+  </header>
+
+  <!-- ===== Main content ===== -->
+  <main class="content-grid">
+
+    <section class="timeline-section">
+      <h2>Work Experience</h2>
+
+      <div class="timeline">
+        @for (exp of experiences(); track exp.id) {
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+
+            <div class="exp-card">
+              <div class="exp-card-top">
+                <div class="exp-icon" [class]="'icon-' + exp.iconType">
+                  @switch (exp.iconType) {
+                    @case ('angular') {
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2 2.5 5.5 4 18l8 4 8-4 1.5-12.5L12 2Zm0 2.3 6.9 2.5-1.2 9.9L12 19.6l-5.7-2.9-1.2-9.9L12 4.3Zm0 2.4-4.3 9.9h1.7l.9-2.2h3.4l.9 2.2h1.7L12 6.7Zm0 3 1.2 3H10.8l1.2-3Z"></path>
+                      </svg>
+                    }
+                    @case ('react') {
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+                        <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"></circle>
+                        <ellipse cx="12" cy="12" rx="10" ry="4.2"></ellipse>
+                        <ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(60 12 12)"></ellipse>
+                        <ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(120 12 12)"></ellipse>
+                      </svg>
+                    }
+                    @case ('python') {
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2c-1.9 0-3.4.3-3.4 1.9v2.2h4.8v.6H6.2C4.4 6.7 3 8.3 3 11.4c0 3 1.2 4.7 3.4 4.7h1.4v-2.1c0-2.2 1.9-4.1 4.1-4.1h4c1.8 0 3.1-1.4 3.1-3.1V4.6C19 3 17.5 2 15.6 2h-3.6Zm-2.1 1.6c.5 0 .9.4.9.9s-.4.9-.9.9-.9-.4-.9-.9.4-.9.9-.9Z"></path>
+                        <path d="M12 22c1.9 0 3.4-.3 3.4-1.9v-2.2h-4.8v-.6h7.2c1.8 0 3.2-1.6 3.2-4.7 0-3-1.2-4.7-3.4-4.7h-1.4v2.1c0 2.2-1.9 4.1-4.1 4.1h-4c-1.8 0-3.1 1.4-3.1 3.1v2.3c0 1.6 1.5 2.6 3.4 2.6h3.6Zm2.1-1.6c-.5 0-.9-.4-.9-.9s.4-.9.9-.9.9.4.9.9-.4.9-.9.9Z"></path>
+                      </svg>
+                    }
+                  }
+                </div>
+
+                <div class="exp-heading">
+                  <h3>{{ exp.role }}</h3>
+                  <p class="exp-company">{{ exp.company }}</p>
+                  <p class="exp-dates">{{ exp.dateRange }}</p>
+                </div>
+
+                <span class="exp-badge" [class]="'badge-' + exp.badgeVariant">{{ exp.badgeLabel }}</span>
+              </div>
+
+              <p class="exp-description">{{ exp.description }}</p>
+
+              <div class="tech-row">
+                @for (tech of exp.tech; track tech.name) {
+                  <span class="tech-badge" [class]="'tech-' + tech.variant">{{ tech.name }}</span>
+                }
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <h2>Experience Highlights</h2>
+
+      <div class="highlights-list">
+        @for (item of highlights(); track item.id) {
+          <div class="highlight-item">
+            <div class="highlight-icon" [style.--highlight-color]="'var(' + item.colorVar + ')'">
+              @switch (item.iconType) {
+                @case ('trending') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="3 17 9 11 13 15 21 6"></polyline>
+                    <polyline points="15 6 21 6 21 12"></polyline>
+                  </svg>
+                }
+                @case ('team') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="4"></circle>
+                    <path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"></path>
+                  </svg>
+                }
+                @case ('rocket') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09Z"></path>
+                    <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 19 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2Z"></path>
+                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                  </svg>
+                }
+              }
+            </div>
+            <div class="highlight-text">
+              <h4>{{ item.title }}</h4>
+              <p>{{ item.description }}</p>
+            </div>
+          </div>
+        }
+      </div>
+
+      <div class="resume-card">
+        <h3>Download Resume</h3>
+        <p>Get a complete overview of my experience and skills.</p>
+        <button type="button" class="download-btn" (click)="onDownloadResume()">
+          Download PDF
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v12"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <path d="M5 21h14"></path>
+          </svg>
+        </button>
+      </div>
+    </aside>
+
+  </main>
+
+
+
+
+  <!--project-->
+   <header id="projects" class="first-page">
+    <h1 class="first-page-title">My Projects</h1>
+    <p class="first-page-subtitle">
+      A collection of fullstack applications and tools I've built with modern technologies.
+    </p>
+  </header>
+
+  <!-- ===== Filters ===== -->
+  <div class="filters">
+    @for (filter of filters; track filter) {
+      <button
+        type="button"
+        class="filter-chip"
+        [class.filter-chip-active]="activeFilter() === filter"
+        (click)="setFilter(filter)"
+      >
+        @switch (filter) {
+          @case ('Angular') {
+            <span class="chip-icon chip-icon-angular">A</span>
+          }
+          @case ('React') {
+            <span class="chip-icon chip-icon-react">⚛</span>
+          }
+          @case ('Python') {
+            <span class="chip-icon chip-icon-python">🐍</span>
+          }
+          @case ('Other') {
+            <span class="chip-icon chip-icon-other">▦</span>
+          }
+        }
+        {{ filter }}
+      </button>
+    }
+  </div>
+
+  <!-- ===== Project cards ===== -->
+  <div class="project-grid">
+    @for (project of filteredProjects(); track project.name) {
+      <article class="project-card">
+        <div class="card-header">
+          <div class="card-icon" [ngSwitch]="project.icon">
+            @switch (project.icon) {
+              @case ('angular') {
+                <svg viewBox="0 0 24 24" class="icon-angular" aria-hidden="true">
+                  <path
+                    fill="var(--angular-color)"
+                    d="M12 1.5 2.4 4.9l1.47 12.73L12 22.5l8.13-4.87L21.6 4.9 12 1.5Zm0 2.13 7.15 2.53-1.15 9.95L12 20.13l-6-3.99-1.15-9.98L12 3.63Z"
+                  />
+                  <path
+                    fill="var(--angular-color)"
+                    d="m12 6.1-4.6 10.3h1.72l.93-2.3h3.9l.93 2.3h1.72L12 6.1Zm-1.34 6.44L12 8.9l1.34 3.64h-2.68Z"
+                  />
+                </svg>
+              }
+              @case ('react') {
+                <svg viewBox="0 0 24 24" class="icon-react" aria-hidden="true">
+                  <circle cx="12" cy="12" r="2.2" fill="var(--react-color)" />
+                  <g fill="none" stroke="var(--react-color)" stroke-width="1.3">
+                    <ellipse cx="12" cy="12" rx="10" ry="4.2" />
+                    <ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(60 12 12)" />
+                    <ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(120 12 12)" />
+                  </g>
+                </svg>
+              }
+              @case ('python') {
+                <svg viewBox="0 0 24 24" class="icon-python" aria-hidden="true">
+                  <path
+                    fill="#3776ab"
+                    d="M11.9 1.6c-5.3 0-5 2.3-5 2.3v2.4h5.1v.7H4.9S1.6 6.6 1.6 12s2.9 5.9 2.9 5.9h1.7v-2.7s-.1-2.9 2.9-2.9h4.9s2.8 0 2.8-2.7V4.4s.4-2.8-5.9-2.8Zm-2.8 1.6c.5 0 .9.4.9.9s-.4.9-.9.9-.9-.4-.9-.9.4-.9.9-.9Z"
+                  />
+                  <path
+                    fill="#ffd43b"
+                    d="M12.1 22.4c5.3 0 5-2.3 5-2.3v-2.4H12v-.7h7.1s3.3.4 3.3-5-2.9-5.9-2.9-5.9h-1.7v2.7s.1 2.9-2.9 2.9h-4.9s-2.8 0-2.8 2.7v4.5s-.4 2.8 5.9 2.8Zm2.8-1.6c-.5 0-.9-.4-.9-.9s.4-.9.9-.9.9.4.9.9-.4.9-.9.9Z"
+                  />
+                </svg>
+              }
+            }
+          </div>
+          <h3 class="card-title">{{ project.name }}</h3>
+        </div>
+
+        <div class="card-tags">
+          @for (tag of project.tags; track tag.label) {
+            <span class="tag" [style.color]="'var(' + tag.colorVar + ')'" [style.border-color]="'var(' + tag.colorVar + ')'">
+              {{ tag.label }}
+            </span>
+          }
+        </div>
+
+        <p class="card-description">{{ project.description }}</p>
+
+        <div class="card-links">
+          <a [href]="project.liveDemoUrl" class="card-link" target="_blank" rel="noopener noreferrer">
+            Live Demo
+            <span class="link-icon">↗</span>
+          </a>
+          <span class="link-divider">|</span>
+          <a [href]="project.githubUrl" class="card-link" target="_blank" rel="noopener noreferrer">
+            GitHub
+            <span class="link-icon">⌥</span>
+          </a>
+        </div>
+      </article>
+    }
+  </div>
+
+  <!-- ===== CTA banner ===== -->
+  <section class="cta-banner">
+    <div class="cta-left">
+      <div class="cta-icon">&lt;/&gt;</div>
+      <div>
+        <h2 class="cta-title">Have a project in mind?</h2>
+        <p class="cta-subtitle">Let's build something amazing together.</p>
+      </div>
+    </div>
+    <a class="btn-contact" href="#contact">
+      Contact Me
+      <span class="link-icon">→</span>
+    </a>
+  </section>
+
+
+
+
+
+  <!-- Contact-->
+
+   <header id="contact" class="contact-page-header">
+    <h1 class="contact-page-title">Contact Me</h1>
+    <p class="contact-page-subtitle">
+      Have a project in mind or want to discuss an opportunity? I'd love to hear from you.
+    </p>
+  </header>
+
+  <!-- ===== Highlights ===== -->
+  <div class="highlight-list">
+    @for (item of HighlightKeyItem; track item.title) {
+      <div class="highlight-row">
+        <div class="icon-circle" [class]="'accent-' + item.accent">
+          @switch (item.icon) {
+            @case ('chat') {
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 5h16v10H8l-4 4V5Z" />
+              </svg>
+            }
+            @case ('bolt') {
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 3 5 14h6l-1 7 8-11h-6l1-7Z" />
+              </svg>
+            }
+            @case ('handshake') {
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m2 12 4-4 4 2 3-3 3 3 4-2 4 4" />
+                <path d="m6 12 3 3 3-2 3 2 3-3" />
+              </svg>
+            }
+          }
+        </div>
+        <div class="highlight-text">
+          <h3 class="highlight-title">{{ item.title }}</h3>
+          <p class="highlight-description">{{ item.description }}</p>
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ===== Availability ===== -->
+  <section class="availability">
+    <h2 class="section-label">Availability</h2>
+    <div class="availability-status">
+      <span class="status-dot"></span>
+      <span class="status-text">Available for new projects</span>
+    </div>
+    <p class="availability-note">Open to freelance and full-time opportunities.</p>
+  </section>
+
+  <!-- ===== Other ways to connect ===== -->
+  <section class="connect-card">
+    <h2 class="connect-title">Other Ways to Connect</h2>
+
+    <div class="connect-grid">
+      @for (item of connectItems; track item.label) {
+        <div class="connect-item">
+          <div class="icon-circle icon-circle-sm" [class]="'accent-' + item.accent">
+            @switch (item.icon) {
+              @case ('mail') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <path d="m3 7 9 6 9-6" />
+                </svg>
+              }
+              @case ('phone') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 4h3l2 5-2 1a11 11 0 0 0 6 6l1-2 5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" />
+                </svg>
+              }
+              @case ('whatsapp') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 18l-1.5 3L7 19.5A8 8 0 1 0 4 13a7.9 7.9 0 0 0 1 4Z" />
+                  <path d="M9 9.5c0 3 2.5 5.5 5.5 5.5.4 0 .8-.6.6-1l-1-2-1.6.6-1.6-1.6.6-1.6-2-1c-.4-.2-1 .2-1 .6Z" />
+                </svg>
+              }
+              @case ('linkedin') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="2" />
+                  <path d="M8 10.5V16M8 8v.01M12 16v-3.5c0-1.1.9-2 2-2s2 .9 2 2V16M12 12.5V16" />
+                </svg>
+              }
+              @case ('pin') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z" />
+                  <circle cx="12" cy="9.5" r="2.3" />
+                </svg>
+              }
+              @case ('clock') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="8.5" />
+                  <path d="M12 8v4l3 2" />
+                </svg>
+              }
+            }
+          </div>
+
+          <div class="connect-text">
+            <span class="connect-label">{{ item.label }}</span>
+            <span
+              class="connect-value"
+              [class]="item.valueAccent ? 'value-' + item.valueAccent : ''"
+            >
+              {{ item.value }}
+            </span>
+            <span class="connect-note">{{ item.note }}</span>
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer contact-footer">
+    <p class="footer-copy">© 2026 Fullstack Engineer. All rights reserved.</p>
+    <div class="footer-socials">
+      <a href="#" class="social-icon" aria-label="GitHub">⌥</a>
+      <a href="" class="social-icon" aria-label="LinkedIn">in</a>
+      <a href="#" class="social-icon" aria-label="Twitter">𝕏</a>
+      <a href="#" class="social-icon" aria-label="Email">✉</a>
+    </div>
+  </footer>
+
+
+</article> 
+</main>

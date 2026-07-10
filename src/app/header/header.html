@@ -1,0 +1,46 @@
+<div class="hero-wrapper" [class.light-theme]="theme.isLight()">
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-icon">&lt;/&gt;</span>
+      <span>Fullstack Engineer</span>
+    </div>
+
+    <button class="menu-toggle" type="button" (click)="toggleMenu()" aria-label="Toggle navigation menu" [attr.aria-expanded]="isMenuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links" [class.open]="isMenuOpen">
+      @for (link of navLinks; track link.path) {
+        <a
+          (click)="onNav(link, $event); closeMenu()"
+          [routerLink]="[link.path]"
+          [fragment]="link.fragment"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: link.path === '/' }"
+          class="nav-link"
+        >
+          {{ link.label }}
+        </a>
+      }
+    </nav>
+
+    <div class="header-actions">
+      <button
+        class="theme-toggle"
+        type="button"
+        (click)="toggleTheme()"
+        [attr.aria-label]="theme.isLight() ? 'Switch to dark mode' : 'Switch to light mode'"
+      >
+        @if (theme.isLight()) {
+          <span>🌙</span>
+        } @else {
+          <span>☀️</span>
+        }
+      </button>
+      <button class="hire-btn" type="button" (click)="onDownloadResume()">Hire Me</button>
+    </div>
+  </header>
