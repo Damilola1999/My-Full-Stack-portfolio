@@ -46,8 +46,8 @@ export class Header {
 
   onDownloadResume(): void {
     const link = document.createElement('a');
-    link.href = new URL('doj.docx', document.baseURI).href;
-    link.download = 'doj.docx';
+    link.href = new URL('Daniel_Damilola_Joseph_fullstack.docx', document.baseURI).href;
+    link.download = 'Daniel_Damilola_Joseph_fullstack.docx';
     link.style.display = 'none';
     document.body.appendChild(link);
     link.click();
