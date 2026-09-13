@@ -211,6 +211,34 @@ export class Home {
 
   private readonly projects: Project[] = [
     {
+      name: 'Prime-Legacy',
+      category: 'Angular',
+      icon: 'angular',
+      tags: [
+        { label: 'Angular', colorVar: '--angular-color' },
+        { label: 'Firebase', colorVar: '--accent-green' },
+        { label: 'GitHub', colorVar: '--accent-green' },
+      ],
+      description: 'A full-featured e-commerce platform with cart, checkout.',
+      liveDemoUrl: 'https://prime-legacy-e92jfvo52-primelegacy.vercel.app/',
+      githubUrl: '#',
+    },
+
+    {
+      name: 'Work-Match',
+      category: 'React',
+      icon: 'react',
+      tags: [
+        { label: 'React', colorVar: '--react-color' },
+        { label: 'Firebase', colorVar: '--accent-green' },
+        { label: 'GitHub', colorVar: '--accent-green' },
+      ],
+      description: 'A full-featured e-commerce platform with cart, checkout.',
+      liveDemoUrl: 'https://work-match-xi.vercel.app/',
+      githubUrl: '#',
+    },
+
+    {
       name: 'E-Commerce Store',
       category: 'Angular',
       icon: 'angular',
@@ -268,7 +296,7 @@ export class Home {
     },
 
     {
-      name: 'Tesla-Inspired Car Configurator ',
+      name: 'Tesla-Inspired Car Configurator',
       category: 'React',
       icon: 'react',
       tags: [
