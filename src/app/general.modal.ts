@@ -92,7 +92,7 @@ export interface Tag {
 export interface Project {
   name: string;
   category: ProjectCategory;
-  icon: 'angular' | 'react' | 'python';
+  icon: 'angular' | 'react' | 'react native' | 'python';
   tags: Tag[];
   description: string;
   liveDemoUrl?: string;

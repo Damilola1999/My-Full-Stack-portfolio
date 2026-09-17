@@ -219,7 +219,7 @@ export class Home {
         { label: 'Firebase', colorVar: '--accent-green' },
         { label: 'GitHub', colorVar: '--accent-green' },
       ],
-      description: 'A full-featured e-commerce platform with cart, checkout.',
+      description: 'A Tech company that provides innovative solutions to modern problems.',
       liveDemoUrl: 'https://prime-legacy-e92jfvo52-primelegacy.vercel.app/',
       githubUrl: '#',
     },
@@ -233,8 +233,24 @@ export class Home {
         { label: 'Firebase', colorVar: '--accent-green' },
         { label: 'GitHub', colorVar: '--accent-green' },
       ],
-      description: 'A full-featured e-commerce platform with cart, checkout.',
+      description: 'A minor job seeking platform connecting job seekers with potential employers.',
       liveDemoUrl: 'https://work-match-xi.vercel.app/',
+      githubUrl: '#',
+    },
+
+    {
+      name: 'E-store',
+      category: 'React',
+      icon: 'react',
+      tags: [
+        { label: 'React', colorVar: '--angular-color' },
+        { label: 'Firebase', colorVar: '--accent-green' },
+        { label: 'GitHub', colorVar: '--accent-green' },
+      ],
+      description:
+        'An app connecting buyers, sellers, dispatch riders and manufacturers in one app',
+      liveDemoUrl:
+        'https://expo.dev/accounts/dandami_117/projects/marketplace/builds/3a70af4d-65a6-441d-a09c-48f258a58192',
       githubUrl: '#',
     },
 
