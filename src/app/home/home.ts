@@ -49,10 +49,10 @@ export class Home {
       image: '/react.png',
     },
     {
-      name: 'Python',
-      description: 'Developing robust APIs and backend services.',
-      colorClass: 'python',
-      image: '/python.png',
+      name: 'Node.js',
+      description: 'Building scalable network applications and backend services.',
+      colorClass: 'nodejs',
+      image: '/nodejs.png',
     },
   ];
 
@@ -87,7 +87,7 @@ export class Home {
   readonly techIcons = signal<TechIcon[]>([
     { name: 'Angular', icon: 'angular' },
     { name: 'React', icon: 'react' },
-    { name: 'Python', icon: 'python' },
+    { name: 'Node.js', icon: 'nodejs' },
     { name: 'TypeScript', icon: 'typescript' },
     { name: 'JavaScript', icon: 'javascript' },
     { name: 'Git', icon: 'git' },
@@ -149,7 +149,7 @@ export class Home {
       tech: [
         { name: 'Angular', variant: 'angular' },
         { name: 'React', variant: 'react' },
-        { name: 'Python', variant: 'python' },
+        { name: 'Node.js', variant: 'nodejs' },
       ],
     },
     {
@@ -165,7 +165,7 @@ export class Home {
       tech: [
         { name: 'Angular', variant: 'angular' },
         { name: 'React', variant: 'react' },
-        { name: 'Python', variant: 'python' },
+        { name: 'Node.js', variant: 'nodejs' },
       ],
     },
   ]);
@@ -205,7 +205,7 @@ export class Home {
   }
 
   // projects
-  protected readonly filters: FilterKey[] = ['All', 'Angular', 'React', 'Python', 'Other'];
+  protected readonly filters: FilterKey[] = ['All', 'Angular', 'React', 'NodeJS', 'Other'];
 
   protected readonly activeFilter = signal<FilterKey>('All');
 
@@ -216,7 +216,7 @@ export class Home {
       icon: 'angular',
       tags: [
         { label: 'Angular', colorVar: '--angular-color' },
-        { label: 'Firebase', colorVar: '--accent-green' },
+        { label: 'Node.js', colorVar: '--accent-green' },
         { label: 'GitHub', colorVar: '--accent-green' },
       ],
       description: 'A Tech company that provides innovative solutions to modern problems.',
@@ -230,7 +230,7 @@ export class Home {
       icon: 'react',
       tags: [
         { label: 'React', colorVar: '--react-color' },
-        { label: 'Firebase', colorVar: '--accent-green' },
+        { label: 'Node.js', colorVar: '--accent-green' },
         { label: 'GitHub', colorVar: '--accent-green' },
       ],
       description: 'A minor job seeking platform connecting job seekers with potential employers.',
@@ -244,7 +244,7 @@ export class Home {
       icon: 'react',
       tags: [
         { label: 'React', colorVar: '--angular-color' },
-        { label: 'Firebase', colorVar: '--accent-green' },
+        { label: 'Node.js', colorVar: '--accent-green' },
         { label: 'GitHub', colorVar: '--accent-green' },
       ],
       description:
@@ -260,7 +260,7 @@ export class Home {
       icon: 'angular',
       tags: [
         { label: 'Angular', colorVar: '--angular-color' },
-        { label: 'Firebase', colorVar: '--accent-green' },
+        { label: 'Node.js', colorVar: '--accent-green' },
         { label: 'GitHub', colorVar: '--accent-green' },
       ],
       description: 'A full-featured e-commerce platform with cart, checkout.',
@@ -274,7 +274,7 @@ export class Home {
       icon: 'angular',
       tags: [
         { label: 'Angular', colorVar: '--angular-color' },
-        { label: 'python', colorVar: '--accent-green' },
+        { label: 'nodejs', colorVar: '--nodejs-color' },
         { label: 'GitHub', colorVar: '--accent-green' },
       ],
       description:
@@ -289,7 +289,7 @@ export class Home {
       icon: 'angular',
       tags: [
         { label: 'Angular', colorVar: '--angular-color' },
-        { label: 'python', colorVar: '--accent-green' },
+        { label: 'nodejs', colorVar: '--nodejs-color' },
         { label: 'GitHub', colorVar: '--accent-green' },
       ],
       description: ' demo built to show how decision-makers can replace static',
@@ -303,7 +303,7 @@ export class Home {
       icon: 'react',
       tags: [
         { label: 'React', colorVar: '--angular-color' },
-        { label: 'python', colorVar: '--accent-green' },
+        { label: 'nodejs', colorVar: '--nodejs-color' },
         { label: 'GitHub', colorVar: '--accent-green' },
       ],
       description: ' health education content, condition guides, and wellness ',
@@ -317,7 +317,7 @@ export class Home {
       icon: 'react',
       tags: [
         { label: 'React', colorVar: '--angular-color' },
-        { label: 'Firebase', colorVar: '--accent-green' },
+        { label: 'Node.js', colorVar: '--accent-green' },
         { label: 'GitHub', colorVar: '--accent-green' },
       ],
       description: ' Tesla-Inspired Car Configurator',

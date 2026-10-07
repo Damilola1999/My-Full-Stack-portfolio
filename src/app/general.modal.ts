@@ -1,7 +1,7 @@
 export interface TechStackItem {
   name: string;
   description: string;
-  colorClass: 'angular' | 'react' | 'python';
+  colorClass: 'angular' | 'react' | 'nodejs';
   image: string;
 }
 
@@ -27,7 +27,7 @@ export interface TechIcon {
   icon:
     | 'angular'
     | 'react'
-    | 'python'
+    | 'nodejs'
     | 'nodejs'
     | 'typescript'
     | 'tailwind'
@@ -42,8 +42,8 @@ export interface QuickStat {
   icon: 'code' | 'clients' | 'coffee' | 'rocket';
 }
 
-type TechVariant = 'angular' | 'react' | 'python' | 'neutral';
-type IconType = 'angular' | 'react' | 'python';
+type TechVariant = 'angular' | 'react' | 'nodejs' | 'neutral';
+type IconType = 'angular' | 'react' | 'nodejs';
 type StatIconType = 'briefcase' | 'calendar' | 'users';
 type HighlightIconType = 'trending' | 'team' | 'rocket';
 type BadgeVariant = 'present' | 'duration-blue' | 'duration-yellow';
@@ -81,7 +81,7 @@ export interface Highlight {
   colorVar: string;
 }
 
-export type ProjectCategory = 'Angular' | 'React' | 'Python' | 'Other';
+export type ProjectCategory = 'Angular' | 'React' | 'NodeJS' | 'Other';
 export type FilterKey = 'All' | ProjectCategory;
 
 export interface Tag {
@@ -92,7 +92,7 @@ export interface Tag {
 export interface Project {
   name: string;
   category: ProjectCategory;
-  icon: 'angular' | 'react' | 'react native' | 'python';
+  icon: 'angular' | 'react' | 'react native' | 'nodejs';
   tags: Tag[];
   description: string;
   liveDemoUrl?: string;
@@ -133,8 +133,8 @@ export interface InfoItem {
 
 export interface SkillCard {
   name: string;
-  colorVar: '--angular-color' | '--react-color' | '--python-color';
-  icon: 'angular' | 'react' | 'python';
+  colorVar: '--angular-color' | '--react-color' | '--nodejs-color';
+  icon: 'angular' | 'react' | 'nodejs';
   description: string;
   items: string[];
 }

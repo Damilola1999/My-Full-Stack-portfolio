@@ -10,7 +10,7 @@ html, body {
     padding: 0;
     overflow-y: auto;
     overflow-x: auto;
-    color: black;
+    color: #f1f5f9;
     font-family: 'Inter', sans-serif;
-    background-color: #000000;
+    background-color: #0f172a;
 }
