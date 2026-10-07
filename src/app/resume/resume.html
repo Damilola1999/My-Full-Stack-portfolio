@@ -7,7 +7,7 @@
           Building scalable web applications
           <br />
           with <span class="hl-angular">Angular</span>, <span class="hl-react">React</span>
-          &amp; <span class="hl-python">Python</span>.
+          &amp; <span class="hl-python">Node.Js</span>.
         </p>
         <p class="hero-desc">
           I build end-to-end applications with modern frontend frameworks and powerful backend
@@ -131,6 +131,7 @@
             <div class="skill-icon" [ngSwitch]="skill.icon">
               <img *ngSwitchCase="'angular'" src="/angular.png" alt="Angular logo" class="skill-icon-img" />
               <img *ngSwitchCase="'react'" src="/react.png" alt="React logo" class="skill-icon-img" />
+              <img *ngSwitchCase="'nodejs'" src="/nodejs.png" alt="Node.js logo" class="skill-icon-img" />
               <img *ngSwitchCase="'python'" src="/python.png" alt="Python logo" class="skill-icon-img" />
             </div>
             <h3 [style.color]="'var(' + skill.colorVar + ')'">{{ skill.name }}</h3>

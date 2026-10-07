@@ -46,11 +46,11 @@ export class Resume implements OnInit, OnDestroy {
       items: ['JavaScript (ES6+)', 'React Hooks', 'Redux / Context API', 'Material UI / Tailwind'],
     },
     {
-      name: 'Python',
-      colorVar: '--python-color',
-      icon: 'python',
-      description: 'Developing robust APIs and backend services.',
-      items: ['Django / Flask', 'RESTful APIs', 'PostgreSQL / MySQL', 'Celery / Redis'],
+      name: 'Node.js',
+      colorVar: '--nodejs-color',
+      icon: 'nodejs',
+      description: 'Building scalable network applications and backend services.',
+      items: ['Express.js', 'RESTful APIs', 'PostgreSQL / MongoDB', 'Docker / Redis'],
     },
   ];
 
@@ -63,7 +63,7 @@ export class Resume implements OnInit, OnDestroy {
         'Architected Angular apps cutting bundle size 38%, load time 2.1s, and form errors 35%, while hitting 95+ Lighthouse scores and 82% test coverage.',
     },
     {
-      role: 'Fullstack Developer',
+      role: 'Front-End Developer',
       company: 'Samsky Pay UK (Contract)',
       period: 'Aug 2023 - Dec 2024',
       description:
@@ -75,10 +75,10 @@ export class Resume implements OnInit, OnDestroy {
     {
       title: 'E-Commerce Platform',
       icon: 'cart',
-      description: 'Full-featured e-commerce application with Angular, Firebase and GitHub.',
+      description: 'Full-featured e-commerce application with Angular, Node.js and GitHub.',
       tags: [
         { label: 'Angular', color: 'angular' },
-        { label: 'Firebase', color: 'firebase' },
+        { label: 'Node.js', color: 'node' },
         { label: 'GitHub', color: 'github' },
       ],
     },
@@ -90,7 +90,7 @@ export class Resume implements OnInit, OnDestroy {
         'consolidating live sports updates, stock market data, weather forecasts, and breaking news.',
       tags: [
         { label: 'Angular', color: 'angular' },
-        { label: 'python', color: 'python' },
+        { label: 'nodejs', color: 'nodejs' },
         { label: 'GitHub', color: 'github' },
       ],
     },
@@ -101,7 +101,7 @@ export class Resume implements OnInit, OnDestroy {
       description: 'demo built to show how decision-makers can replace static',
       tags: [
         { label: 'Angular', color: 'angular' },
-        { label: 'python', color: 'python' },
+        { label: 'nodejs', color: 'nodejs' },
         { label: 'GitHub', color: 'github' },
       ],
     },
@@ -112,7 +112,7 @@ export class Resume implements OnInit, OnDestroy {
       description: 'health education content, condition guides, and wellness',
       tags: [
         { label: 'react', color: 'react' },
-        { label: 'python', color: 'python' },
+        { label: 'nodejs', color: 'nodejs' },
         { label: 'GitHub', color: 'github' },
       ],
     },
@@ -123,7 +123,7 @@ export class Resume implements OnInit, OnDestroy {
       description: 'Tesla-Inspired Car Configurator',
       tags: [
         { label: 'react', color: 'react' },
-        { label: 'python', color: 'python' },
+        { label: 'nodejs', color: 'nodejs' },
         { label: 'GitHub', color: 'github' },
       ],
     },

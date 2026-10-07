@@ -49,10 +49,10 @@ export class Home {
       image: '/react.png',
     },
     {
-      name: 'Python',
-      description: 'Developing robust APIs and backend services.',
-      colorClass: 'python',
-      image: '/python.png',
+      name: 'Node.js',
+      description: 'Building scalable network applications and backend services.',
+      colorClass: 'nodejs',
+      image: '/nodejs.png',
     },
   ];
 
@@ -87,15 +87,15 @@ export class Home {
   readonly techIcons = signal<TechIcon[]>([
     { name: 'Angular', icon: 'angular' },
     { name: 'React', icon: 'react' },
-    { name: 'Python', icon: 'python' },
+    { name: 'Node.js', icon: 'nodejs' },
     { name: 'TypeScript', icon: 'typescript' },
     { name: 'JavaScript', icon: 'javascript' },
     { name: 'Git', icon: 'git' },
   ]);
 
   readonly quickStats = signal<QuickStat[]>([
-    { value: '5+', label: 'Projects Built', icon: 'code' },
-    { value: '5+', label: 'Happy Clients', icon: 'clients' },
+    { value: '8+', label: 'Projects Built', icon: 'code' },
+    { value: '8+', label: 'Happy Clients', icon: 'clients' },
     { value: '1000+', label: 'Hours Coded', icon: 'coffee' },
     { value: '3+', label: 'Years Experience', icon: 'rocket' },
   ]);
@@ -120,7 +120,7 @@ export class Home {
     {
       id: 2,
       iconType: 'calendar',
-      value: '5+',
+      value: '8+',
       label: 'Projects Completed',
       colorVar: '--accent-blue',
     },
@@ -149,13 +149,13 @@ export class Home {
       tech: [
         { name: 'Angular', variant: 'angular' },
         { name: 'React', variant: 'react' },
-        { name: 'Python', variant: 'python' },
+        { name: 'Node.js', variant: 'nodejs' },
       ],
     },
     {
       id: 2,
       iconType: 'react',
-      role: 'Fullstack Developer',
+      role: 'Front-End Developer',
       company: 'Samsky Pay UK (Contract)',
       dateRange: 'Aug 2023 - Dec 2024',
       badgeLabel: '1.5 yrs',
@@ -165,7 +165,6 @@ export class Home {
       tech: [
         { name: 'Angular', variant: 'angular' },
         { name: 'React', variant: 'react' },
-        { name: 'Python', variant: 'python' },
       ],
     },
   ]);
@@ -196,7 +195,7 @@ export class Home {
 
   onDownloadResume(): void {
     const link = document.createElement('a');
-    link.href = new URL('Daniel_Damilola_Joseph_fullstack.docx', document.baseURI).href; // public/doj.docx is served from the app root
+    link.href = new URL('Daniel_Damilola_Joseph_fullstack_tightened.docx', document.baseURI).href; // public/doj.docx is served from the app root
     link.download = 'Daniel_Damilola_Joseph_fullstack.docx';
     link.style.display = 'none';
     document.body.appendChild(link);
@@ -205,7 +204,7 @@ export class Home {
   }
 
   // projects
-  protected readonly filters: FilterKey[] = ['All', 'Angular', 'React', 'Python', 'Other'];
+  protected readonly filters: FilterKey[] = ['All', 'Angular', 'React', 'NodeJS', 'Other'];
 
   protected readonly activeFilter = signal<FilterKey>('All');
 
@@ -216,7 +215,7 @@ export class Home {
       icon: 'angular',
       tags: [
         { label: 'Angular', colorVar: '--angular-color' },
-        { label: 'Firebase', colorVar: '--accent-green' },
+        { label: 'Node.js', colorVar: '--accent-green' },
         { label: 'GitHub', colorVar: '--accent-green' },
       ],
       description: 'A Tech company that provides innovative solutions to modern problems.',
@@ -230,7 +229,7 @@ export class Home {
       icon: 'react',
       tags: [
         { label: 'React', colorVar: '--react-color' },
-        { label: 'Firebase', colorVar: '--accent-green' },
+        { label: 'Node.js', colorVar: '--accent-green' },
         { label: 'GitHub', colorVar: '--accent-green' },
       ],
       description: 'A minor job seeking platform connecting job seekers with potential employers.',
@@ -244,7 +243,7 @@ export class Home {
       icon: 'react',
       tags: [
         { label: 'React', colorVar: '--angular-color' },
-        { label: 'Firebase', colorVar: '--accent-green' },
+        { label: 'Node.js', colorVar: '--accent-green' },
         { label: 'GitHub', colorVar: '--accent-green' },
       ],
       description:
@@ -260,7 +259,7 @@ export class Home {
       icon: 'angular',
       tags: [
         { label: 'Angular', colorVar: '--angular-color' },
-        { label: 'Firebase', colorVar: '--accent-green' },
+        { label: 'Node.js', colorVar: '--accent-green' },
         { label: 'GitHub', colorVar: '--accent-green' },
       ],
       description: 'A full-featured e-commerce platform with cart, checkout.',
@@ -274,7 +273,7 @@ export class Home {
       icon: 'angular',
       tags: [
         { label: 'Angular', colorVar: '--angular-color' },
-        { label: 'python', colorVar: '--accent-green' },
+        { label: 'nodejs', colorVar: '--nodejs-color' },
         { label: 'GitHub', colorVar: '--accent-green' },
       ],
       description:
@@ -289,7 +288,7 @@ export class Home {
       icon: 'angular',
       tags: [
         { label: 'Angular', colorVar: '--angular-color' },
-        { label: 'python', colorVar: '--accent-green' },
+        { label: 'nodejs', colorVar: '--nodejs-color' },
         { label: 'GitHub', colorVar: '--accent-green' },
       ],
       description: ' demo built to show how decision-makers can replace static',
@@ -303,7 +302,7 @@ export class Home {
       icon: 'react',
       tags: [
         { label: 'React', colorVar: '--angular-color' },
-        { label: 'python', colorVar: '--accent-green' },
+        { label: 'nodejs', colorVar: '--nodejs-color' },
         { label: 'GitHub', colorVar: '--accent-green' },
       ],
       description: ' health education content, condition guides, and wellness ',
@@ -317,7 +316,7 @@ export class Home {
       icon: 'react',
       tags: [
         { label: 'React', colorVar: '--angular-color' },
-        { label: 'Firebase', colorVar: '--accent-green' },
+        { label: 'Node.js', colorVar: '--accent-green' },
         { label: 'GitHub', colorVar: '--accent-green' },
       ],
       description: ' Tesla-Inspired Car Configurator',
