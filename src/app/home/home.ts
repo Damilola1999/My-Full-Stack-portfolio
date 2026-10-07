@@ -165,6 +165,7 @@ export class Home {
       tech: [
         { name: 'Angular', variant: 'angular' },
         { name: 'React', variant: 'react' },
+        { name: 'Python', variant: 'python' },
       ],
     },
   ]);
