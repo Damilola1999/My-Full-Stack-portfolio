@@ -42,7 +42,7 @@ export interface QuickStat {
   icon: 'code' | 'clients' | 'coffee' | 'rocket';
 }
 
-type TechVariant = 'angular' | 'react' | 'nodejs' | 'neutral';
+type TechVariant = 'angular' | 'react' | 'nodejs' | 'neutral' | 'python';
 type IconType = 'angular' | 'react' | 'nodejs';
 type StatIconType = 'briefcase' | 'calendar' | 'users';
 type HighlightIconType = 'trending' | 'team' | 'rocket';

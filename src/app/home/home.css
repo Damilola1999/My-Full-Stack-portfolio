@@ -12,6 +12,7 @@
   --angular-color: #ff6b6b;
   --react-color: #38bdf8;
   --nodejs-color: #4ade80;
+  --python-color: #fbbf24;
 
   background: var(--bg);
   color: var(--text-primary);
@@ -35,6 +36,7 @@
   --angular-color: #ef4444;
   --react-color: #0284c7;
   --nodejs-color: #16a34a;
+  --python-color: #d97706;
 }
 
 .hero-wrapper {

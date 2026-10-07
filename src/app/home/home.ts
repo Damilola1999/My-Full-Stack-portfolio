@@ -165,7 +165,7 @@ export class Home {
       tech: [
         { name: 'Angular', variant: 'angular' },
         { name: 'React', variant: 'react' },
-        { name: 'Python', variant: 'python' },
+        { name: 'Node.js', variant: 'nodejs' },
       ],
     },
   ]);
@@ -376,7 +376,7 @@ export class Home {
       label: 'Phone',
       value: '09071734982',
       valueAccent: 'green',
-      note: 'Mon - Fri, 9AM - 6PM (EST)',
+      note: 'Mon - Sunday, 7AM - 9PM (EST)',
     },
     {
       icon: 'whatsapp',
@@ -398,7 +398,7 @@ export class Home {
       icon: 'pin',
       accent: 'yellow',
       label: 'Location',
-      value: 'Remote Worldwide',
+      value: 'Onsite/Remote Worldwide',
       valueAccent: 'yellow',
       note: 'Available across time zones.',
     },
